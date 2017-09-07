@@ -10,76 +10,9 @@
                 "parameters": {
                     "basic.to_if_alone_timeout_milliseconds": 1000
                 },
-                "rules": [
-                    {
-                        "description": "コマンドキーを単体で押したときに、英数・かなキーを送信する。（左コマンドキーは英数、右コマンドキーはかな）",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_command",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_command"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "japanese_eisuu"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "right_command",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_command"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "japanese_kana"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    }
-                ]
+                "rules": []
             },
             "devices": [
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": {},
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": false,
-                        "product_id": 16387,
-                        "vendor_id": 1133
-                    },
-                    "ignore": false,
-                    "simple_modifications": {
-                        "grave_accent_and_tilde": "japanese_eisuu",
-                        "japanese_pc_katakana": "japanese_kana",
-                        "japanese_pc_nfer": "japanese_eisuu",
-                        "japanese_pc_xfer": "japanese_kana",
-                        "left_control": "left_command",
-                        "right_option": "japanese_kana"
-                    }
-                },
                 {
                     "disable_built_in_keyboard_if_exists": false,
                     "fn_function_keys": {},
@@ -91,6 +24,37 @@
                     },
                     "ignore": false,
                     "simple_modifications": {}
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": {},
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 34304,
+                        "vendor_id": 1452
+                    },
+                    "ignore": false,
+                    "simple_modifications": {}
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": {},
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 50475,
+                        "vendor_id": 1133
+                    },
+                    "ignore": false,
+                    "simple_modifications": {
+                        "grave_accent_and_tilde": "japanese_eisuu",
+                        "japanese_pc_katakana": "japanese_kana",
+                        "japanese_pc_nfer": "japanese_eisuu",
+                        "japanese_pc_xfer": "japanese_kana",
+                        "left_control": "left_command",
+                        "right_option": "japanese_kana"
+                    }
                 }
             ],
             "fn_function_keys": {
